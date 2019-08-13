@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main{
+    background: linear-gradient(45deg,#2497EA 40%,#821CCB 80%);
+    width: 100%;
+    height: 100%;
+    transition: height .6s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+}
+
+.card{
+    width: 400px;
+    height: 450px;
+    cursor: pointer;
+    position: relative;
+    opacity: 1;
+    transition: opacity .3s linear;
+}
+
+.card-test{
+    opacity: 0;
+}
+
+.card__front,.card__back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: transform .6s linear;
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.5) ;
+}
+
+.card__front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: perspective(600px) rotateY(0);
+}
+.card__back{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card--rotate>.card__front{
+    transform:perspective(600px) rotateY(-180deg);
+}
+.card--rotate>.card__back{
+    transform: perspective(600px) rotateY(0);
+}
+
+.card__picture{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    transform: translateY(-50px);
+    border: 3px solid #1DACFB;
+    box-shadow: 0 0 15px 5px #6C1CB3;
+}
+
+.card__text{
+    align-self: flex-end;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.card__back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button_list{
+    width: 60%;
+    list-style: none;
+}
+.button_list>li>button{
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: rgba(0,0,0,.3);
+    color: #1DACFB;
+    transition: transform .2s linear;
+}
+
+.button_list>li>button:hover{
+    transform: scale(1.05);
+    transform-origin: center;
+    box-shadow: 0 0 10px #821CCB;
+}
+
+.logout_button{
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    opacity: 0;
+    transition: all linear .45s .2s;
+}
+
+.logout_button--show{
+    right: 20px;
+    opacity: 1;
+}
+
+.header-mini_card{
+    left: 50px;
+    top: 20px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all linear .45s .2s;
+    cursor: pointer;
+}
+
+.account{
+    display: flex;
+    justify-content: center;
+}
+.account_hide_button{
+    position: fixed;
+    bottom: 30px;
+    opacity: 0;
+    transition: all .5s linear;
+    background-color: #1993d5;
+    box-shadow: 0 0 10px #ecd8ff;
+    color: white;
+}
+
+.account_hide_button--show{
+    opacity: 1 !important;
+}
