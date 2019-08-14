@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="IssueStyle.css">
+    <link rel="stylesheet" href="issueStyles.css">
     <script src="issue.controller.js"></script>
     <meta charset="UTF-8">
     <title>LMS</title>
@@ -11,13 +11,13 @@
     <div class="issueCard">
         <img class="bookImg" src="defaultBookPic.jpg">
         Reserve the book SOME BOOK
-        <form action="javascript:void(0)" class="datesForm">
+        <form action="javascript:void(0)" class="datesForm" onsubmit="reserveBook()">
             <label for="fromDate"> From Date </label>
                 <input type="date" id="fromDate" required>
 
             <label for="toDate"  > To Date </label>
                 <input type="date" id="toDate" required>
-            <input type="submit" onclick="reserveBook()">
+            <input type="submit" ">
         </form>
     </div>
 </div>
