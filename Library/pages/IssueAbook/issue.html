@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="IssueStyle.css">
+    <script src="issue.controller.js"></script>
+    <meta charset="UTF-8">
+    <title>LMS</title>
+</head>
+<body>
+<div class="container">
+    <div class="issueCard">
+        <img class="bookImg" src="defaultBookPic.jpg">
+        Reserve the book SOME BOOK
+        <form action="javascript:void(0)" class="datesForm">
+            <label for="fromDate"> From Date </label>
+                <input type="date" id="fromDate" required>
+
+            <label for="toDate"  > To Date </label>
+                <input type="date" id="toDate" required>
+            <input type="submit" onclick="reserveBook()">
+        </form>
+    </div>
+</div>
+</body>
+</html>
